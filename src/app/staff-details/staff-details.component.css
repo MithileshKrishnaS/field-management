@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@layer components {
+
+    .width {
+        @apply t-max-w-[80%] t-mx-auto;
+    }
+
+    .flex-gap {
+        @apply t-flex t-gap-3 t-items-center;
+    }
+
+    .img {
+        @apply t-w-4 t-h-4;
+    }
+
+}
+
+@tailwind utilities;

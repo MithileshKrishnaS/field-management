@@ -1,0 +1,10 @@
+<div class="t-max-w-[1200px] t-mx-auto t-p-5">
+    <div class="t-flex t-flex-wrap t-gap-3 t-float-left">
+        <div *ngFor="let each of countByStatus | keyvalue"
+         class="t-text-white t-bg-primary t-w-full md:t-w-40 t-p-4 t-flex t-flex-col t-justify-between t-rounded t-cursor-pointer" 
+         (click)="eachStatus(each)">
+            <div class="t-text-2xl">{{ each.key | letterspell:each.key }}</div>
+            <div class="t-text-lg t-text-end">{{each.value}}</div>
+        </div>
+    </div>
+</div>

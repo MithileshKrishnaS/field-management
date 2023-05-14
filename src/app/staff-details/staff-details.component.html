@@ -1,0 +1,22 @@
+<div>
+    <div class="t-bg-gradient-to-r t-from-color-1 t-to-secondary width t-h-28 t-w-full"></div>
+    <div class="t-flex t-flex-col t-gap-5">
+        <img [src]="userImage" class="t-w-32 t-h-32 t-mt-[-4rem] t-mx-auto t-object-contain"/>
+        <div class="t-text-primary t-font-bold t-text-xl width">{{staffdata.name}}</div>
+    </div>
+
+    <div class="width t-flex t-justify-between t-mt-5">
+        <div class="flex-gap">
+            <span><img src="assets/images/blood.svg" class="img"/></span>
+            <span>{{staffdata.blood_group}}</span>
+        </div>
+        <div class="flex-gap">
+            <span><img src="assets/images/date.svg" class="img"/></span>
+            <span>{{staffdata.dob}}</span>
+        </div>
+        <div class="flex-gap">
+            <span><img src="assets/images/staff.svg" class="img"/></span>
+            <span>{{staffdata.gender}}</span>
+        </div>
+    </div>
+</div>

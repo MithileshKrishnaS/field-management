@@ -1,0 +1,17 @@
+<div class="t-p-4">
+    <div class="t-flex t-flex-col t-gap-1">
+    <div class="t-text-xl t-font-bold">Staff</div>
+    <div class="row t-mt-5 t-bg-secondary/20 t-font-medium">
+        <span class="t-w-8"> ID </span>
+        <span class="t-w-24 t-text-center"> Name </span>
+        <span class="t-w-28"> Gender </span>
+    </div>
+    <div class="row t-bg-white" *ngFor="let each of staffData">
+        <span class="t-w-8">{{each.id}}</span>
+        <span class="t-w-24"
+        class="t-underline t-text-secondary t-font-medium t-cursor-pointer" (click)="getUserData(each)"
+        >{{each.name}}</span>
+        <span class="t-w-28">{{each.gender}}</span>
+    </div>
+    </div>
+</div>

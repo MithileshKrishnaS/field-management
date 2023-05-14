@@ -1,0 +1,7 @@
+<div class="t-h-16 t-p-3 t-bg-white t-flex t-items-center t-justify-between">
+    <div *ngIf="isMobile">
+        <img (click)="openMenu()" src="assets/images/menu.svg" alt="menu" class="t-w-8 t-h-8 t-object-contain"/>
+    </div>
+    <div class="t-text-xl t-font-medium">Field Management</div>
+    <div><img [src]="userImage" class="t-w-10 t-h-10 t-mx-auto t-object-contain"/></div>
+</div>

@@ -1,0 +1,23 @@
+<div class="t-p-4">
+    <div class="t-flex t-flex-col t-gap-1">
+        <div class="t-flex t-justify-between t-items-center t-flex-wrap t-gap-4 md:t-gap-0">
+            <span class="t-font-bold t-text-xl">{{status | letterspell:status}}</span>
+            <span><input type="text" [(ngModel)]="filterData" class="input" placeholder="Search"/></span>
+        </div>
+        <div class="row t-mt-5 t-bg-secondary/20 t-font-medium">
+            <span>Job ID</span>
+            <span class="t-w-24">Assaigned To</span>
+            <span class="t-w-28">Status</span>
+        </div>
+        <div *ngFor="let each of statusData | filterValue:filterData " class="row t-bg-white">
+            <span class="t-w-8">{{each.job_id}}</span>
+            <div class="t-flex t-gap-2 t-w-24 t-text-ellipsis">
+                <span *ngFor="let e of each.assigned_to; let i = index"
+                class="t-underline t-text-secondary t-font-medium t-cursor-pointer" (click)="getUserData(e.id)">
+                    {{e.name}} {{i < each.assigned_to.length-1 ? ',' : ''}}
+                </span>
+            </div>
+            <span class="t-w-28">{{each.status | letterspell:each.status}}</span>
+        </div>
+    </div>
+</div>

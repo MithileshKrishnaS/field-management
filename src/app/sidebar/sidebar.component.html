@@ -1,0 +1,22 @@
+<div class="t-h-[100vh] t-bg-primary t-p-3"
+ [ngClass]="{'t-absolute t-z-10 t-w-full':(isMobile && menuClicked)}" *ngIf="!isMobile || menuClicked">
+    <!-- if screen size is less that 768px isMobile ngClass will be executed  -->
+    <div [ngClass]="{'t-flex t-justify-between': isMobile}">
+        <div class="t-bg-white t-rounded t-text-primary/60 t-text-xl t-flex t-items-center t-justify-center t-p-1" [ngClass]="{'t-w-10': isMobile}">
+            FM
+        </div>
+        <div *ngIf="isMobile" class="t-p-2 t-flex t-justify-center t-items-center t-border t-border-white t-rounded-md">
+            <img src="assets/images/left.svg" class="t-w-6 t-h-6" alt="arrow" (click)="closeMenu()"/>
+        </div>
+    </div>
+
+    <div class="t-flex t-mt-10 t-p-[10px]"
+     [ngClass]="{'t-relative t-flex-col t-gap-10': !isMobile, 't-gap-3 t-items-center': isMobile, 't-bg-secondary t-rounded': each.active }" *ngFor="let each of menuItems"  (click)="navigate(each)">
+        <span class="t-cursor-pointer" (mouseenter)="each.isHover = true" (mouseleave)="each.isHover = false">
+            <img [src]="each.src" class="t-text-white t-w-5 t-h-5"/>
+        </span>
+        <div class="t-text-white t-font-medium" *ngIf="isMobile">{{each.name | letterspell:each.name}}</div>
+        <div class="t-absolute t-bg-black t-rounded-lg t-p-2 t-text-white t-text-sm t-z-10 t-ml-12"
+         *ngIf="each.isHover && !isMobile">{{each.name}}</div>
+    </div>
+</div>
