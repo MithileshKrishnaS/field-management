@@ -3,6 +3,21 @@
 @tailwind components;
 .row {
     @apply t-p-2 t-flex t-w-full t-justify-between t-text-medium t-rounded-md;
+}
+.width {
+    @apply t-max-w-[80%] t-mx-auto;
+}
+
+.flex-gap {
+    @apply t-flex t-gap-3 t-items-center;
+}
+
+.img {
+    @apply t-w-4 t-h-4;
+}
+
+.input {
+    @apply t-px-2 t-py-1 t-rounded t-border t-border-solid t-border-black/40;
   }
 @tailwind utilities;
 

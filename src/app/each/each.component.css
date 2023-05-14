@@ -1,9 +1,0 @@
-@tailwind base;
-@tailwind components;
-@layer components {
-    .input {
-      @apply t-px-2 t-py-1 t-rounded t-border t-border-solid t-border-black/40;
-    }
-  }
-
-@tailwind utilities;

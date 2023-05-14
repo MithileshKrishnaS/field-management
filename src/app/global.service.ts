@@ -23,7 +23,7 @@ export class GlobalService {
   public eachType : eachType = {};
   public staffData : staffData;
   menuClick = new BehaviorSubject<boolean>(false);
-  api = 'http://127.0.0.1:8081/';
+  api = 'https://field-node.onrender.com/';
 
   constructor( private http : HttpClient) {
     this.staffData = {name: '', id: 0, blood_group: '', dob: '', gender:''};
